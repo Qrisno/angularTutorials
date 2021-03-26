@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="buttons">
+    <button  (click)="onStart()" class="btn btn-primary">Start</button>
+    <button (click)="pause()" class="btn btn-default">Pause</button>
+    <button (click)="stop()" class="btn btn-danger">Delete</button>
+  </div>
+  <div class="num" *ngFor="let number of numbers">
+    <app-odd [number]="number"></app-odd>
+    <app-even [number]="number"></app-even>
+  </div>
+
+</div>
+

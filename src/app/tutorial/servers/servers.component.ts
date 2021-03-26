@@ -15,6 +15,8 @@ export class ServersComponent implements OnInit {
   servers = ['testServer', 'testServer2'];
   serverCreated = false;
   displayDetails = false;
+  buttonClickLogs: number[] = [];
+  numberOfClicks = 0;
   constructor() {
     setTimeout(() => {
       this.allowNewServer = true;
@@ -31,7 +33,8 @@ export class ServersComponent implements OnInit {
   onUpdateServerName(event: Event): void{
     this.serverName = ( event.target as HTMLInputElement).value;
   }
-  onClick(): boolean{
-    return !this.displayDetails;
+  onClick(): void{
+    this.displayDetails = !this.displayDetails;
+    this.buttonClickLogs.push(++this.numberOfClicks);
   }
 }

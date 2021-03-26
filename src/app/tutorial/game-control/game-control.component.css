@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container .buttons {
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 20px;
+  width: 100%;
+}
+.container .buttons button {
+  outline: none;
+  width: 20%;
+  height: 50px;
+}
+
+/*# sourceMappingURL=game-control.component.css.map */
