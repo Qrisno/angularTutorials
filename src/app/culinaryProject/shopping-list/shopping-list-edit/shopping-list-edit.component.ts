@@ -18,7 +18,7 @@ export class ShoppingListEditComponent implements OnInit, OnChanges  {
   add(): void{
     const ing = {
       name: this.name?.nativeElement.value,
-      value: this.value?.nativeElement.value
+      amount: this.value?.nativeElement.value
     };
     this.ingredient.emit(ing);
   }

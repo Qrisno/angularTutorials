@@ -23,6 +23,8 @@ import {BasicHighlightDirective} from './tutorial/directives/basicHighlight.dire
 import { BetterHighlightDirective } from './tutorial/directives/better-highlight.directive';
 import { UnlessDirective } from './tutorial/directives/unless.directive';
 import { DropdownDirective } from './culinaryProject/shared/directives/dropdown.directive';
+import {ShoppingListService} from './culinaryProject/shared/services/shopping-list.service';
+import {RecipesService} from './culinaryProject/shared/services/recipes.service';
 
 
 @NgModule({
@@ -53,7 +55,7 @@ import { DropdownDirective } from './culinaryProject/shared/directives/dropdown.
     FormsModule,
     CommonModule
   ],
-  providers: [],
+  providers: [ShoppingListService, RecipesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
