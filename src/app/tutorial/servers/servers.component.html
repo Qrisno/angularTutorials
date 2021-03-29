@@ -13,7 +13,7 @@
 <p>{{username}}</p>
 <button (click)='onClick()' [disabled]='!username'>Click ME</button> -->
 <button (click)="onClick()">Display Details</button>
-<p *ngIf="displayDetails">Secret Password = 'Tuna'</p>
+<p *appUnless="!displayDetails">Secret Password = 'Tuna'</p>
 <p *ngFor="let number of buttonClickLogs; let i = index;" [ngClass]="{
 blue: i > 3
 }">{{number}}</p>

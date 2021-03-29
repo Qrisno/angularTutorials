@@ -19,6 +19,9 @@ import { ShoppingListEditComponent } from './culinaryProject/shopping-list/shopp
 import { GameControlComponent } from './tutorial/game-control/game-control.component';
 import { OddComponent } from './tutorial/odd/odd.component';
 import { EvenComponent } from './tutorial/even/even.component';
+import {BasicHighlightDirective} from './tutorial/directives/basicHighlight.directive';
+import { BetterHighlightDirective } from './tutorial/directives/better-highlight.directive';
+import { UnlessDirective } from './tutorial/directives/unless.directive';
 
 
 @NgModule({
@@ -37,7 +40,10 @@ import { EvenComponent } from './tutorial/even/even.component';
     ShoppingListEditComponent,
     GameControlComponent,
     OddComponent,
-    EvenComponent
+    EvenComponent,
+    BasicHighlightDirective,
+    BetterHighlightDirective,
+    UnlessDirective
   ],
   imports: [
     BrowserModule,
