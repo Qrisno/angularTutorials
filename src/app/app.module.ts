@@ -22,6 +22,7 @@ import { EvenComponent } from './tutorial/even/even.component';
 import {BasicHighlightDirective} from './tutorial/directives/basicHighlight.directive';
 import { BetterHighlightDirective } from './tutorial/directives/better-highlight.directive';
 import { UnlessDirective } from './tutorial/directives/unless.directive';
+import { DropdownDirective } from './culinaryProject/shared/directives/dropdown.directive';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { UnlessDirective } from './tutorial/directives/unless.directive';
     EvenComponent,
     BasicHighlightDirective,
     BetterHighlightDirective,
-    UnlessDirective
+    UnlessDirective,
+    DropdownDirective
   ],
   imports: [
     BrowserModule,
