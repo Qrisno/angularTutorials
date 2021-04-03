@@ -2,4 +2,8 @@ li a, li span {
   cursor: pointer;
 }
 
+#dropdown {
+  user-select: none;
+}
+
 /*# sourceMappingURL=recipe-datail.component.css.map */

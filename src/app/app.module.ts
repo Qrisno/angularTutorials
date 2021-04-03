@@ -25,6 +25,8 @@ import { UnlessDirective } from './tutorial/directives/unless.directive';
 import { DropdownDirective } from './culinaryProject/shared/directives/dropdown.directive';
 import {ShoppingListService} from './culinaryProject/shared/services/shopping-list.service';
 import {RecipesService} from './culinaryProject/shared/services/recipes.service';
+import { RecipesStartComponent } from './culinaryProject/recipes/recipes-start/recipes-start.component';
+import { RecipeEditComponent } from './culinaryProject/recipes/recipe-edit/recipe-edit.component';
 
 
 @NgModule({
@@ -47,7 +49,9 @@ import {RecipesService} from './culinaryProject/shared/services/recipes.service'
     BasicHighlightDirective,
     BetterHighlightDirective,
     UnlessDirective,
-    DropdownDirective
+    DropdownDirective,
+    RecipesStartComponent,
+    RecipeEditComponent
   ],
   imports: [
     BrowserModule,

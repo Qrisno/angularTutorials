@@ -2,4 +2,8 @@ a {
   cursor: pointer;
 }
 
+.active {
+  background-color: blue;
+}
+
 /*# sourceMappingURL=recipe-item.component.css.map */

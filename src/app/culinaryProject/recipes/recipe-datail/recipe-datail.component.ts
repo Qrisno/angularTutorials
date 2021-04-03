@@ -13,11 +13,13 @@ export class RecipeDatailComponent implements OnInit {
   recipe!: Recipe;
   constructor(private shoppingListService: ShoppingListService,
               private recipeService: RecipesService,
-              private router: Router) { }
+              private router: Router,
+              private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.recipe = this.recipeService.getRecipes()[this.activatedRoute.snapshot.params.id];
     this.recipeService.recipeSelected.subscribe((recipe) => {
-      this.recipe = recipe;
+      this.recipe = this.recipeService.getRecipes()[this.activatedRoute.snapshot.params.id];
     });
   }
   addToShoppingList(ingredients: Ingredient[] | undefined): void{
@@ -27,6 +29,9 @@ export class RecipeDatailComponent implements OnInit {
     }));
     this.router.navigate(['/shopping']);
     }
+  }
+  edit(id: number | undefined): void{
+    this.router.navigate(['../', id, 'edit'], {relativeTo: this.activatedRoute});
   }
 
 }
