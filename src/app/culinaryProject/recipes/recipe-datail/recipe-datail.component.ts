@@ -18,8 +18,9 @@ export class RecipeDatailComponent implements OnInit {
 
   ngOnInit(): void {
     this.recipe = this.recipeService.getRecipes()[this.activatedRoute.snapshot.params.id];
-    this.recipeService.recipeSelected.subscribe((recipe) => {
-      this.recipe = this.recipeService.getRecipes()[this.activatedRoute.snapshot.params.id];
+    this.activatedRoute.params.subscribe((params) => {
+      this.recipe = this.recipeService.getRecipes()[+params.id];
+
     });
   }
   addToShoppingList(ingredients: Ingredient[] | undefined): void{

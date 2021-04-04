@@ -13,9 +13,6 @@ export class RecipesComponent implements OnInit {
   constructor(private recipesService: RecipesService, private router: Router, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.recipesService.recipeSelected.subscribe((val) => {
-      this.recipe = val;
-    });
   }
 
 }
